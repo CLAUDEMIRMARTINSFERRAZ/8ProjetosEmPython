@@ -1,14 +1,24 @@
 #Simulador de Dado
 #Simular uma jogada de um dado aleatóriamente 
 
-from http.client import INSUFFICIENT_STORAGE
+import PySimpleGUI as sg
 import random
+
 
 class SimuladorDeDado:
     def __init__(self):
         self.valor_minimo = 1
         self.valor_maximo = 6
         self.mensagem = 'Voce gostaria de jogar o dado?'
+
+        #Layout
+        layout = [
+            [sg.Text('Jogar o dado?')],
+            [sg.Button ('sim'),sg.Button('não')]
+        ]
+        #Criar uma janela
+        #Ler os valores na tela
+        #Realizar algo com os valores extraidos
 
     def Iniciar(self):
         resposta = input(self.mensagem)
