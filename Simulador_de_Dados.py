@@ -12,7 +12,7 @@ class SimuladorDeDado:
 
     def Iniciar(self):
         resposta = input(self.mensagem)
-        if resposta == 'Sim':
+        if resposta == 'sim':
             self.GerarValorDoDado()
 
     def GerarValorDoDado(self):
