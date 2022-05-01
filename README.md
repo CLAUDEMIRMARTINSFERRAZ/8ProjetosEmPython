@@ -1,0 +1,2 @@
+# 8ProjetosEmPython
+Para estudos
