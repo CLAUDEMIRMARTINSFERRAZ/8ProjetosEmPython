@@ -12,26 +12,27 @@ class SimuladorDeDado:
 
         #Layout
         self.layout = [
-            [sg.Text('Jogar o dado?')],
-            [sg.Button ('sim'),sg.Button('não')]
+            [sg.Text('Jogar o dado da Sorte?')],
+            [sg.Button ('Sim'),sg.Button('Não')]
         ]
     def Iniciar(self): 
         #Criar uma janela
-        self.janela = sg.Window ('Simulador de Dado', layout= self.layout)
+        self.janela = sg.Window ('Simulador de Dado', layout = self.layout)
 
         #Ler os valores na tela
         self.eventos, self.valores = self.janela.Read()
 
         #Realizar algo com os valores extraidos
-            try:
-                if self.evento == 'sim' or self.evento == 's':
-                    self.GerarValorDoDado()
-                elif self.evento == 'não' or self.evento =='n':
-                    print('Agradeço a sua participação!!')
-                else:
-                     print('Favor digitar sim ou o não')
-            except:
-                    print('Ocorreu um erro ao receber sua resposta!!')
+        try:
+            if self.evento == 'Sim' or self.evento == 's':
+                self.GerarValorDoDado()
+            elif self.evento == 'Não' or self.evento =='n':
+                print('Agradeço a sua participação!!')
+            else:
+                print('Favor digitar sim ou o não')
+                
+        except:
+            print('Ocorreu um erro ao receber sua resposta!!')
 
     def GerarValorDoDado(self):
         print(random.randint(self.valor_minimo, self.valor_maximo))
